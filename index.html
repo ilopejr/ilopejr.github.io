@@ -31,7 +31,17 @@
 
 </head>
 
-<body>
+<body value="PLAY" onclick="play()">
+    <!-- MUSIC -->
+    <script>
+        function play() {
+          var audio = document.getElementById("audio");
+          audio.play();
+        }
+      </script>
+      <audio id="audio" src="assets/mymusic.mp3"></audio>
+      <!-- // MUSIC -->
+      
     <!-- ******HEADER****** -->
     <header class="header">
         <div class="container">
