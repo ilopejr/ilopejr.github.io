@@ -19,6 +19,8 @@
 
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
     <!-- github calendar css -->
     <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar-responsive.css">
@@ -26,21 +28,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
     <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
 
+
     <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
 
 </head>
 
 <body value="PLAY" onclick="play()">
     <!-- MUSIC -->
-    <script>
+        <script>
         function play() {
-            var audio = document.getElementById("audio");
-            audio.play();
+        var audio = document.getElementById("audio");
+        audio.play();
         }
-    </script>
-    <audio id="audio" src="assets/mymusic.mp3"></audio>
+        </script>
+
+        <audio id="audio" src="assets/mymusic.mp3" loop></audio>
     <!-- // MUSIC -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" onclick="$('#myModal').modal('hide')">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <!-- <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div> -->
+            <div class="modal-body">
+            <div class="text-center">
+                <img src="assets/images/img1.jpg" class="img-fluid rounded" alt="Responsive image">
+            </div>
+            <div class="text-center">
+                
+            </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-block mx-auto" data-dismiss="modal">Buka Situs? Klik Aku</button>
+            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+            </div>
+        </div>
+        </div>
+    </div>
+
 
     <!-- ******HEADER****** -->
     <header class="header">
@@ -90,13 +121,11 @@
                         <h2 class="heading">Tentang Saya</h2>
                         <div class="content">
                             <p>
-                                Hi, Perkenalkan nama saya Syaiful Bahri. saya tinggal di indonesia tepatnya di daerah Subang, Jawa Barat. Saya adalah seorang Graphic Designer Saya memiliki pengalaman bekerja lebih dari 2th di perusahaan perbankan, 1th intansi negara, dan 5th sebagai
-                                freelance designer grafis.
+                                Hi, Perkenalkan nama saya Syaiful Bahri. saya tinggal di indonesia tepatnya di daerah Subang, Jawa Barat. Saya adalah seorang Graphic Designer Saya memiliki pengalaman bekerja lebih dari 2th di perusahaan perbankan, 1th intansi negara, dan 5th sebagai freelance designer grafis.
 
                                 <p>“Saya adalah profesional IT dengan pengalaman 2 tahun sebagai <i>software support specialist</i> dan <i>system/network technician.</i></p>
 
-                                <p>Seorang yang sangat teliti dan terampil mengoperasikan berbagai platform IT <i>support</i>. Memiliki kemampuan komunikasi lisan dan verbal yang baik, serta mampu memaparkan isu-isu <i>software</i> yang kompleks dalam istilah
-                                    yang mudah dipahami.”</p>
+                                <p>Seorang yang sangat teliti dan terampil mengoperasikan berbagai platform IT <i>support</i>. Memiliki kemampuan komunikasi lisan dan verbal yang baik, serta mampu memaparkan isu-isu <i>software</i> yang kompleks dalam istilah yang mudah dipahami.”</p>
                                 <p><a href="download/syaiful-cv.pdf">Download CV.pdf</a></p>
                             </p>
 
@@ -163,20 +192,6 @@
                             <!--//item-->
                             <hr class="divider" />
                             <div class="item row">
-                                <a class="col-md-4 col-12" href="page-acaraperbarindo.html">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-5.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="page-acaraperbarindo.html">Pra Munas Perbarindo Nasional & LPS</a></h3>
-                                    <p class="mb-2">Acara Pra Munas Perbarindo Nasional dan Workshop LPS Pembuatan Modul Pelatihan Berbasis Kompetensi BPR...
-                                    </p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <!--//item-->
-                            <div class="item row">
                                 <a class="col-md-4 col-12" href="page-3d.html">
                                     <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-4.png" alt="project name" />
                                 </a>
@@ -209,8 +224,8 @@
                                 </a>
                                 <div class="desc col-md-8 col-12">
                                     <h3 class="title"><a href="page-obs.html">THP Periode XII 2020</a></h3>
-                                    <p class="mb-2">Panitian Acara undian THP (Tabungan Harmoni Plus) Wilayah Jawa Barat, Kegiatan setahun sekali. Panitia dari acara tersebut yang bertugas membuat konten acara dan operator live stream acara tersebut yang akan di siarkan
-                                        langsung via zoom, dan Youtube untuk dihadiri pada nas...</p>
+                                    <p class="mb-2">Panitian Acara undian THP (Tabungan Harmoni Plus) Wilayah Jawa Barat, Kegiatan setahun sekali.
+                                        Panitia dari acara tersebut yang bertugas membuat konten acara dan operator live stream acara tersebut yang akan di siarkan langsung via zoom, dan Youtube untuk dihadiri pada nas...</p>
                                 </div>
                                 <!--//desc-->
                             </div>
@@ -239,6 +254,8 @@
             </div>
             <!--//primary-->
             <div class="secondary col-lg-4 col-12">
+              
+                <!--//aside-->
                 <aside class="info aside section">
                     <div class="section-inner shadow-sm rounded">
                         <h2 class="heading sr-only">Informasi Umum</h2>
@@ -247,7 +264,7 @@
                                 <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>Subang, Jawa Barat, Indonesia</li>
                                 <li><i class="fas fa-calendar-alt"></i><span class="sr-only">Lahir:</span>Subang, 15 November 1994</li>
                                 <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a href="#">syaifulbahri.bd@gmail.com</a></li>
-                                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="#">https://www.ilopejr.my.id</a></li>
+                                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="#">www.ilopejr.my.id</a></li>
                             </ul>
                         </div>
                         <!--//content-->
@@ -425,6 +442,11 @@
     <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript">
+        $(window).on('load', function() {
+            $('#myModal').modal('show');
+        });
+    </script>
 </body>
 
 </html>
