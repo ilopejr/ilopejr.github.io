@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syienta - Detail Proyek | Syaiful Bahri</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .project-detail-hero {
+            padding-top: 140px;
+            padding-bottom: 60px;
+            text-align: center;
+        }
+        .project-detail-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: var(--font-heading);
+            font-weight: 700;
+        }
+        .project-meta {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+            color: var(--text-secondary);
+        }
+        .project-meta span {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+        .project-gallery {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .project-gallery img {
+            width: 100%;
+            border-radius: var(--border-radius-md);
+            box-shadow: var(--shadow-glass);
+            border: 1px solid var(--border-glass);
+            transition: var(--transition-normal);
+        }
+        .project-gallery img:hover {
+            transform: scale(1.02);
+            box-shadow: var(--shadow-glow);
+        }
+        @media (min-width: 768px) {
+            .project-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            color: var(--primary);
+            font-weight: 600;
+            background: rgba(225, 29, 72, 0.1);
+            padding: 10px 20px;
+            border-radius: 50px;
+            transition: var(--transition-fast);
+        }
+        .back-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+        .detail-content {
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 1.8;
+            text-align: left;
+            padding: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar scrolled" style="background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(16px); padding: 16px 0; border-bottom: 1px solid var(--border-glass); box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Syaiful<span>.</span></a>
+        </div>
+    </nav>
+
+    <!-- Detail Section -->
+    <section class="project-detail-hero">
+        <div class="container">
+            <!-- <a href="index.html#projects" class="back-btn"><i class="ph ph-arrow-left"></i> Kembali ke Beranda</a> -->
+            <h1 class="project-detail-title">Syienta - Sistem Monitoring Kredit</h1>
+            <div class="project-meta">
+                <span><i class="ph-fill ph-buildings"></i> PT Bank Nusamba Jabar</span>
+                <span><i class="ph-fill ph-desktop"></i> Aplikasi Internal (Web Dashboard)</span>
+                <span><i class="ph-fill ph-code"></i> PHP, HTML, CSS, JS</span>
+            </div>
+            
+            <div class="detail-content glass-card">
+                <p><strong>Syienta</strong> adalah aplikasi sistem internal yang dirancang dan dikembangkan khusus untuk <strong>PT BPR Bank Nusamba Jabar</strong>. Aplikasi cerdas ini berfungsi sebagai alat pemantauan dan manajemen pengajuan kredit secara menyeluruh.</p>
+                <br>
+                <p>Melalui antarmuka dasbor yang interaktif dan *user-friendly*, sistem ini mempermudah jajaran manajemen dan pimpinan untuk melacak jumlah total pengajuan kredit di masing-masing kantor cabang secara <em>real-time</em>. Selain memantau data kuantitatif, Syienta juga dilengkapi dengan metrik analitik yang memungkinkan atasan untuk mengevaluasi kinerja dan KPI masing-masing karyawan dalam memproses kredit, menjadikan tata kelola operasional lebih transparan dan efisien.</p>
+            </div>
+
+            <h3 style="margin-bottom: 30px; font-family: var(--font-heading); font-size: 2rem; color: var(--text-primary);">Galeri Antarmuka Aplikasi</h3>
+            <div class="project-gallery">
+                <img src="media/bpr1.png" alt="Tangkapan Layar Syienta 1">
+                <img src="media/bpr2.png" alt="Tangkapan Layar Syienta 2">
+                <img src="media/bpr3.png" alt="Tangkapan Layar Syienta 3">
+                <img src="media/bpr4.png" alt="Tangkapan Layar Syienta 4">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" style="margin-top: 80px;">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Syaiful Bahri. Seluruh hak cipta dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

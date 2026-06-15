@@ -1,475 +1,347 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="id">
 <head>
-    <title>iLopeJR</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Boootstrap Portfolio/Resume Theme for Developers">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
-    <link rel="shortcut icon" href="favicon.ico">
-
-    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-
-    <!-- FontAwesome JS -->
-    <script defer src="assets/fontawesome/js/all.js"></script>
-
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
-    <!-- github calendar css -->
-    <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar-responsive.css">
-    <!-- github activity css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-    <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
-
-
-    <!-- Theme CSS -->
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <title>Portofolio | Syaiful Bahri</title>
+    <meta name="description" content="Portofolio dan CV profesional Syaiful Bahri. Lihat pengalaman, keahlian, dan proyek terbaru saya.">
     
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<body>
+    <!-- Welcome Modal & Audio -->
+    <audio id="bg-music" loop preload="auto">
+        <source src="media/assets_mymusic.mp3" type="audio/mpeg">
+    </audio>
 
-<body value="PLAY" onclick="play()">
-    <!-- MUSIC -->
-        <script>
-        function play() {
-        var audio = document.getElementById("audio");
-        audio.play();
-        }
-        </script>
-
-        <audio id="audio" src="assets/mymusic.mp3" loop></audio>
-    <!-- // MUSIC -->
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" onclick="$('#myModal').modal('hide')">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-            <!-- <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div> -->
-            <div class="modal-body">
-            <div class="text-center">
-                <img src="assets/images/img1.jpg" class="img-fluid rounded" alt="Responsive image">
-            </div>
-            <div class="text-center">
-                
-            </div>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn-block mx-auto" data-dismiss="modal">Tutup</button>
-            <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
-            </div>
-        </div>
+    <div id="welcome-modal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <h2 style="font-size: 1.8rem; margin-bottom: 15px; color: var(--primary);">Selamat Datang!</h2>
+            <p style="margin-bottom: 25px; color: var(--text-secondary);">Selamat Datang di Portofolio Saya</p>
+            <button id="start-btn" class="btn btn-primary" style="width: 100%;">Mulai Jelajahi</button>
         </div>
     </div>
 
+    <!-- Background Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
 
-    <!-- ******HEADER****** -->
-    <header class="header">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Syaiful<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Beranda</a></li>
+                <li><a href="#about">Tentang</a></li>
+                <li><a href="#experience">Pengalaman</a></li>
+                <li><a href="#skills">Keahlian</a></li>
+                <li><a href="#projects">Portofolio</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary nav-btn">Hubungi Saya</a>
+            <div class="menu-toggle">
+                <i class="ph ph-list"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <span class="greeting">Halo, perkenalkan saya</span>
+                <h1 class="title">Syaiful Bahri</h1>
+                <h2 class="subtitle">Keahlian Campuran di <span class="gradient-text">Pemrograman & Desain</span></h2>
+                <p class="description">
+                    Saya adalah seorang profesional dengan keahlian campuran di bidang programming, desain grafis, dan pengeditan video. Lulusan Sarjana Komputer yang siap membantu mewujudkan ide Anda.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">Lihat Karya Saya</a>
+                    <a href="media/syaiful-cv.pdf" download class="btn btn-outline">
+                        <i class="ph ph-download-simple"></i> Unduh CV
+                    </a>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/ilopejr/" target="_blank" aria-label="Facebook"><i class="ph ph-facebook-logo"></i></a>
+                    <a href="https://id.pinterest.com/jrjr94/my-project/" target="_blank" aria-label="Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+                    <a href="https://x.com/ilopejr" target="_blank" aria-label="X / Twitter"><i class="ph ph-twitter-logo"></i></a>
+                    <a href="https://github.com/ilopejr" target="_blank" aria-label="GitHub"><i class="ph ph-github-logo"></i></a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="image-border">
+                    <!-- Placeholder image, replace with real photo -->
+                    <img src="media/profile.jpg" alt="Foto Profil Syaiful Bahri" class="hero-image">
+                </div>
+                <div class="floating-badge badge-1">
+                    <i class="ph-fill ph-check-circle"></i>
+                    <span>Tersedia untuk Kerja</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <i class="ph-fill ph-star"></i>
+                    <span>Lulusan Sarjana Komputer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section-padding">
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col">
-                    <img class="profile-image img-fluid float-start rounded-circle" src="assets/images/profile.png" alt="profile image" />
-                    <div class="profile-content">
-                        <h1 class="name">Syaiful Bahri</h1>
-                        <h2 class="desc">Desain Grafis</h2>
-                        <ul class="social list-inline">
-                            <li class="list-inline-item"><a href="https://www.instagram.com/jrjr.94/"><i class="fab fa-instagram"></i></a></li>
-                            <li class="list-inline-item"><a href="https://www.facebook.com/ilopejr/"><i class="fab fa-facebook"></i></a></li>
-                            <li class="list-inline-item"><a href="https://twitter.com/ilopejr"><i class="fab fa-twitter"></i></a></li>
-                            <li class="list-inline-item"><a href="https://www.youtube.com/channel/UCGankk0lGGQVon3PsbX2bQQ"><i class="fab fa-youtube"></i></a></li>
-                            <li class="list-inline-item"><a href="https://id.pinterest.com/jrjr94/"><i class="fab fa-pinterest"></i></a></li>
-                            <li class="list-inline-item last-item"><a href="https://github.com/ilopejr/"><i class="fab fa-github-alt"></i></a></li>
-                        </ul>
+            <div class="section-header">
+                <span class="section-subtitle">PENGANTAR</span>
+                <h2 class="section-title">Tentang Saya</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Sebagai lulusan <strong>Sarjana Komputer</strong>, saya menaruh minat besar pada kolaborasi antara teknologi dan kreativitas. Saya tidak hanya handal dalam membangun sistem perangkat lunak yang solid (*programming*), tetapi juga memiliki kepekaan visual yang kuat untuk merancang antarmuka dan memproduksi konten multimedia yang menarik.
+                    </p>
+                    <p>
+                        Bagi saya, setiap proyek adalah kesempatan untuk memberikan solusi teknis sekaligus pengalaman visual yang memukau. Mulai dari merancang website responsif, mengelola basis data yang kompleks, hingga memoles video promosi, saya selalu berkomitmen penuh untuk menghasilkan karya *premium* yang berdampak positif bagi klien maupun instansi.
+                    </p>
+                    <div class="about-stats" style="grid-template-columns: repeat(2, 1fr);">
+                        <div class="stat-item">
+                            <h3>7</h3>
+                            <p>Tahun Pengalaman</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3>3</h3>
+                            <p>Proyek Selesai</p>
+                        </div>
                     </div>
-                    <!--//profile-->
                 </div>
-                <!--//col-->
-                <div class="col-12 col-md-auto">
-                    <div class="dark-mode-switch d-flex">
-                        <div class="form-check form-switch mx-auto mx-md-0">
-                            <input type="checkbox" class="form-check-input me-2" id="darkSwitch" />
-                            <label class="custom-control-label" for="darkSwitch">Mode Gelap</label>
-                        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">KARIR</span>
+                <h2 class="section-title">Pengalaman Kerja</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2020 - Sekarang</span>
+                        <h3 class="timeline-title">Staff IT</h3>
+                        <span class="timeline-company">PT Bank Nusamba Jabar</span>
+                        <p>Bertanggung jawab penuh atas pemeliharaan infrastruktur TI perusahaan serta <strong>mengembangkan Aplikasi Sistem Internal Pembantu Pengajuan Kredit</strong>. Sistem ini dirancang khusus untuk mempercepat dan merapikan proses administrasi kredit secara digital, melengkapi tugas utama dalam menjaga stabilitas layanan operasional perbankan.</p>
                     </div>
-                    <!--//dark-mode-switch-->
-                    <a class="btn btn-cta-secondary" href="https://ilopejr.github.io/"><i class="fas fa-home"></i> Beranda</a>
-                    <a class="btn btn-cta-primary" href="https://wa.me/6282129475059/" target="_blank"><i class="fas fa-paper-plane"></i> Kontak saya</a>
                 </div>
-                <!--//col-->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2018 - 2020</span>
+                        <h3 class="timeline-title">Staff IT</h3>
+                        <span class="timeline-company">Rumah Sakit PMC Pamanukan Subang</span>
+                        <p>Mengelola keandalan Sistem Informasi Manajemen Rumah Sakit (SIMRS) dan infrastruktur jaringan. Selain memberikan dukungan teknis harian, saya juga berhasil <strong>membangun dan merancang aplikasi internal</strong> guna mengoptimalkan efisiensi kelancaran operasional medis dan tata kelola administrasi rumah sakit.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <span class="timeline-date">2017 - 2018</span>
+                        <h3 class="timeline-title">Staff Ahli IT & Data Administrator</h3>
+                        <span class="timeline-company">Dinas Pendidikan Kabupaten Subang</span>
+                        <p>Sebagai staf ahli IT, saya <strong>menciptakan Aplikasi Absensi Online Berbasis Website</strong> yang terintegrasi dengan teknologi pengenalan wajah (*Face Detector*) dan pelacakan lokasi (*Geolocation*). Selain itu, saya juga bertanggung jawab penuh dalam mengelola verifikasi dan pembaruan data siswa se-Kabupaten Subang demi akurasi pelaporan dinas.</p>
+                    </div>
+                </div>
             </div>
-            <!--//row-->
         </div>
-        <!--//container-->
-    </header>
-    <!--//header-->
+    </section>
 
-    <div class="container sections-wrapper py-5">
-        <div class="row">
-            <div class="primary col-lg-8 col-12">
-                <section class="about section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Tentang Saya</h2>
-                        <div class="content">
-                            <p>
-                                Hi, Perkenalkan nama saya Syaiful Bahri. saya tinggal di indonesia tepatnya di daerah Subang, Jawa Barat. Saya adalah seorang Graphic Designer Saya memiliki pengalaman bekerja lebih dari 2th di perusahaan perbankan, 1th intansi negara, dan 5th sebagai freelance designer grafis.
-
-                                <p>“Saya adalah profesional IT dengan pengalaman 2 tahun sebagai <i>software support specialist</i> dan <i>system/network technician.</i></p>
-
-                                <p>Seorang yang sangat teliti dan terampil mengoperasikan berbagai platform IT <i>support</i>. Memiliki kemampuan komunikasi lisan dan verbal yang baik, serta mampu memaparkan isu-isu <i>software</i> yang kompleks dalam istilah yang mudah dipahami.”</p>
-                                <p><a href="download/syaiful-cv.pdf">Download CV.pdf</a></p>
-                            </p>
-
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
-
-                <section class="experience section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Pengalaman Kerja</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title">Staff IT - <span class="place"><a href="#">PT. BPR Nusamba Tanjungsari</a></span> <span class="year">(2020 - Sekarang)</span></h3>
-                                <p>Bekerja sebagai staff IT membantu kebutuhan perusahaan seperti desain spanduk, booklet, socal media feed (IG), kartu nama, dan kebutuhan lainnya. Juga membantu dalam development app perusahaan, masalah jaringan dan Operator
-                                    Zoom + Live Stream jika ada acara tertentu.</p>
-                            </div>
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title">Staff IT - <span class="place"><a href="#">UPTD Pendidikan</a></span> <span class="year">(2019 - 2020)</span></h3>
-                                <p>Rekap Data siswa, semua kecematan dan upload ke aplikasi disdik. dengan skema tertentu. juga membantu dalam teknis kebutuhan IT.</p>
-                            </div>
-                            <!--//item-->
-
-                            <div class="item">
-                                <h3 class="title">Desain Grafis - <span class="place"><a href="#">Freelance</a></span> <span class="year">(2015 - Sekarang)</span></h3>
-                                <p>Menerima Orderan Online untuk kebutuhan tertentu. Desain Logo, Spanduk dll</p>
-                            </div>
-                            <!--//item-->
-
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//Pengalaman Kerja-->
-
-                <section class="latest section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Semua Project Desain Saya @pinterest</h2>
-                        <div class="content">
-
-                            <div class="item featured text-center">
-
-                                <div class="featured-image has-ribbon">
-                                    <a href="https://id.pinterest.com/jrjr94/my-project/" target="_blank">
-                                        <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-featured.jpg" alt="project name" />
-                                    </a>
-                                    <div class="ribbon">
-                                        <div class="text">Baru</div>
-                                    </div>
-                                </div>
-
-                                <h3 class="title mb-3"><a href="https://id.pinterest.com/jrjr94/my-project/" target="_blank">Social Media Feed</a></h3>
-
-                                <div class="desc text-start">
-                                    <p>Disini ada kumpulan hasil proyek saya selama saya bekerja 2th terakhir, berbagai desain saya ada di sini silahkan di klik button di bawah untuk melihat lebih jelas.</p>
-                                </div>
-                                <!--//desc-->
-                                <a class="btn btn-cta-secondary" href="https://id.pinterest.com/jrjr94/my-project/" target="_blank"><i class="fab fa-pinterest"></i> Lihat lebih lengkap</a>
-                            </div>
-                            <hr class="divider" />
-                            
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="page-acaraperbarindo.html">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-5.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="page-acaraperbarindo.html">Pra Munas Perbarindo Nasional & LPS</a></h3>
-                                    <p class="mb-2">Acara Pra Munas Perbarindo Nasional dan Workshop LPS Pembuatan Modul Pelatihan Berbasis Kompetensi BPR...
-                                    </p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-                            
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="page-3d.html">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-4.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="page-3d.html">Modeling 3D SketsUp</a></h3>
-                                    <p class="mb-2">Membuat modeling dengan konsep 3D, dipakai dalam acara denah alamat, denah kantor, model gedu...
-                                    </p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="#">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-1.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="#" target="_blank">OBS Studi, VMIX, StreamLabs</a></h3>
-                                    <p class="mb-2">Proyek undian THP (Tabungan harmoni Plus) 2022 Jawa Barat, saya di sini bertugas untuk menjalankan acara secara teknis seperti penayanagan live zoom dan youtube dalam acara tersebut. pengoprasian software zoom, obs
-                                        studio.
-                                    </p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="page-obs.html">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-3.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="page-obs.html">THP Periode XII 2020</a></h3>
-                                    <p class="mb-2">Panitian Acara undian THP (Tabungan Harmoni Plus) Wilayah Jawa Barat, Kegiatan setahun sekali.
-                                        Panitia dari acara tersebut yang bertugas membuat konten acara dan operator live stream acara tersebut yang akan di siarkan langsung via zoom, dan Youtube untuk dihadiri pada nas...</p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row">
-                                <a class="col-md-4 col-12" href="page-cp.html">
-                                    <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/project-2.png" alt="project name" />
-                                </a>
-                                <div class="desc col-md-8 col-12">
-                                    <h3 class="title"><a href="page-cp.html">Video Company Profil 2021</a></h3>
-                                    <p class="mb-2">Proyek Video Company Profil Bank Nusamba Tanjungsari untuk kebutuhan perusaan dalam acara undian dan HUT Nusamba Group</p>
-                                    <p><a class="more-link" href="https://youtu.be/XnlU8DkRm-8" target="_blank"><i class="fas fa-external-link-alt"></i>Lihat Video</a></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
-
-                <section class="latest section">
-                        <div class="content text-center">
-                            <a class="btn btn-cta-secondary" href="#">1</a>
-                            <a class="btn btn-cta-secondary" href="page-2.html">2</a>
-                            <a class="btn btn-cta-secondary" href="page-2.html">Next ></a>
-                        </div>
-                    <!--//section-inner-->
-                </section>
-                <!--//section-->
-                
+    <!-- Skills Section -->
+    <section id="skills" class="skills section-padding">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">KEMAMPUAN</span>
+                <h2 class="section-title">Keahlian Utama</h2>
             </div>
-            <!--//primary-->
-
-            <div class="secondary col-lg-4 col-12">
-                <!--//aside-->
-                <aside class="info aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading sr-only">Informasi Umum</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>Subang, Jawa Barat, Indonesia</li>
-                                <li><i class="fas fa-calendar-alt"></i><span class="sr-only">Lahir:</span>Subang, 15 November 1994</li>
-                                <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a href="#">syaifulbahri.bd@gmail.com</a></li>
-                                <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a href="#">www.ilopejr.my.id</a></li>
-                            </ul>
-                        </div>
-                        <!--//content-->
+            <div class="skills-grid">
+                <div class="skill-category glass-card">
+                    <h3>Programming / IT</h3>
+                    <div class="skill-tags">
+                        <span class="tag"><i class="ph-fill ph-file-html"></i> HTML5 & CSS3</span>
+                        <span class="tag"><i class="ph-fill ph-file-js"></i> JavaScript</span>
+                        <span class="tag"><i class="ph-fill ph-file-py"></i> Python</span>
+                        <span class="tag"><i class="ph-fill ph-file-code"></i> PHP</span>
+                        <span class="tag"><i class="ph-fill ph-database"></i> MySQL</span>
+                        <span class="tag"><i class="ph-fill ph-android-logo"></i> Android Dev</span>
                     </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//aside-->
-
-                <aside class="skills aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Skill</h2>
-                        <div class="content">
-                            <p class="intro">
-                                Skill saya dalam bidang komputer</p>
-
-                            <div class="skillset">
-
-                                <div class="item">
-                                    <h3 class="level-title">Adobe Photoshop<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="Editing foto, kebutuhan spanduk, banner, booklet, kartu nama dll"><i class="fas fa-info-circle"></i>Sangat Baik</span></h3>
-
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 96%" aria-valuenow="96" aria-valuemin="0" aria-valuemax="96"></div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">Adobe Illuslator<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="Editing foto, kebutuhan spanduk, banner, booklet, kartu nama dll"><i class="fas fa-info-circle"></i>Cukup</span></h3>
-
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 35%" aria-valuenow="35" aria-valuemin="0" aria-valuemax="35"></div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">Adobe Premiere Pro<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="Editing Video"><i class="fas fa-info-circle"></i>Sangat Baik</span></h3>
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0" aria-valuemax="90"></div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">Adobe After Effect<span class="level-label" data-bs-toggle="tooltip" data-bs-placement="left" title="Editing Video Animasi"><i class="fas fa-info-circle"></i>Baik</span></h3>
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 53%" aria-valuenow="53" aria-valuemin="0" aria-valuemax="53"></div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">HTML &amp; CSS<span class="level-label" data-bs-toggle="tooltip" data-placement="left" title="Bahasa Pemograman HTML dan CSS"><i class="fas fa-info-circle"></i>Baik</span></h3>
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="70"></div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">PHP<span class="level-label" data-bs-toggle="tooltip" data-placement="left" title="Bahasa Pemograman HTML dan CSS"><i class="fas fa-info-circle"></i>Cukup</span></h3>
-                                    <div class="level-bar progress">
-                                        <div class="progress-bar level-bar-inner" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="40"></div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <!-- <p><a class="more-link" href="#"><i class="fas fa-external-link-alt"></i>More on GitHub</a></p> -->
-                            </div>
-                        </div>
-                        <!--//content-->
+                </div>
+                <div class="skill-category glass-card">
+                    <h3>Design & Multimedia</h3>
+                    <div class="skill-tags">
+                        <span class="tag"><i class="ph-fill ph-image"></i> Adobe Photoshop</span>
+                        <span class="tag"><i class="ph-fill ph-video"></i> Premiere Pro</span>
+                        <span class="tag"><i class="ph-fill ph-video-camera"></i> Capcut</span>
+                        <span class="tag"><i class="ph-fill ph-figma-logo"></i> Figma</span>
+                        <span class="tag"><i class="ph-fill ph-palette"></i> UI/UX Design</span>
                     </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="education aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Pendidikan</h2>
-                        <div class="content">
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> Sistem Informasi</h3>
-                                <h4 class="university">Universitas Subang (UNSUB) <span class="year">(2012-2017)</span></h4>
-                            </div>
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title"><i class="fas fa-graduation-cap"></i> (RPL) Rekayasa Perangkat Lunak</h3>
-                                <h4 class="university">SMK Darul Ma'arif Pamanukan <span class="year">(2010-2012)</span></h4>
-                            </div>
-                            <!--//item-->
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="languages aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Bahasa</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li class="item">
-                                    <span class="title"><strong>Inggris :</strong></span>
-                                    <span class="level">Native Speaker <br class="visible-xs"/></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
-                                </li>
-                                <!--//item-->
-                                <li class="item">
-                                    <span class="title"><strong>Indonesia :</strong></span>
-                                    <span class="level">Nasional <br class="visible-sm visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></i></span>
-                                </li>
-                                <!--//item-->
-                                <li class="item">
-                                    <span class="title"><strong>Daerah :</strong></span>
-                                    <span class="level">Sunda <br class="visible-sm visible-xs"/><i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i></i></span>
-                                </li>
-                                <!--//item-->
-                            </ul>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="list music aside section">
-                    <div class="section-inner shadow-sm rounded">
-                        <h2 class="heading">Lagu Favorit</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-headphones"></i> <a href="#">Killing Me Inside</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">MCR</a></li>
-                                <li><i class="fas fa-headphones"></i> <a href="#">Anime OST</a></li>
-                            </ul>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-
+                </div>
             </div>
-            <!--//secondary-->
         </div>
-        <!--//row-->
-    </div>
-    <!--//masonry-->
+    </section>
 
-    <!-- ******FOOTER****** -->
+    <!-- Projects Section -->
+    <section id="projects" class="projects section-padding">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">PORTOFOLIO</span>
+                <h2 class="section-title">Proyek Unggulan</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card">
+                    <div class="project-img-wrapper">
+                        <img src="media/bpr1.png" alt="Proyek Syienta Bank Nusamba" class="project-img">
+                        <div class="project-overlay">
+                            <a href="#" onclick="openProjectIframe('syienta-detail.html'); return false;" class="btn-icon" aria-label="Lihat Detail Proyek"><i class="ph ph-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>PHP</span>
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <h3 class="project-title">Syienta - Sistem Monitoring Kredit</h3>
+                        <p class="project-desc">Aplikasi internal PT Bank Nusamba Jabar untuk memantau data pengajuan kredit secara *real-time*, lengkap dengan fitur evaluasi kinerja karyawan di tiap kantor cabang.</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card glass-card">
+                    <div class="project-img-wrapper">
+                        <img src="media/jarvis1.png" alt="Proyek JarvisDrive Autobackup" class="project-img">
+                        <div class="project-overlay">
+                            <a href="#" onclick="openProjectIframe('jarvis-detail.html'); return false;" class="btn-icon" aria-label="Lihat Detail Proyek"><i class="ph ph-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Desktop App</span>
+                        </div>
+                        <h3 class="project-title">JarvisDrive - Sistem Autobackup</h3>
+                        <p class="project-desc">Aplikasi desktop pintar yang secara otomatis mencadangkan data karyawan ke server Google Drive secara *real-time* dan dikategorikan per jabatan.</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card glass-card">
+                    <div class="project-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop" alt="Portofolio Desain Grafis dan UI/UX" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://id.pinterest.com/jrjr94/my-project/" target="_blank" class="btn-icon" aria-label="Lihat Pinterest"><i class="ph ph-pinterest-logo"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>UI/UX</span>
+                            <span>Graphic Design</span>
+                        </div>
+                        <h3 class="project-title">Galeri Desain UI/UX & Sosial Media</h3>
+                        <p class="project-desc">Eksplorasi visual dan karya kreatif saya di bidang desain grafis dan tata letak UI/UX yang dikurasi secara lengkap di halaman Pinterest saya.</p>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="project-card glass-card">
+                    <div class="project-img-wrapper">
+                        <img src="https://www.midiaresearch.com/storage/uploads/blog/featured/2244/cover_image-1721122691.jpg" alt="Proyek Video Editing Bank Nusamba Jabar" class="project-img">
+                        <div class="project-overlay">
+                            <a href="https://www.youtube.com/@banknusambajabar" target="_blank" class="btn-icon" aria-label="Lihat Video"><i class="ph ph-youtube-logo"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tags">
+                            <span>Premiere Pro</span>
+                            <span>Capcut</span>
+                        </div>
+                        <h3 class="project-title">Video Konten Bank Nusamba</h3>
+                        <p class="project-desc">Pengeditan video dan produksi multimedia profesional untuk keperluan promosi, edukasi, dan kampanye digital resmi PT Bank Nusamba Jabar.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section-padding">
+        <div class="container">
+            <div class="contact-wrapper glass-card">
+                <div class="contact-info">
+                    <span class="section-subtitle">KONTAK</span>
+                    <h2 class="section-title">Mari Bekerja Sama</h2>
+                    <p>Saya selalu terbuka untuk mendiskusikan pekerjaan pengembangan produk, kolaborasi, atau peluang kerja baru. Jangan ragu untuk menyapa!</p>
+                    
+                    <ul class="contact-details">
+                        <li>
+                            <div class="contact-icon"><i class="ph ph-envelope-simple"></i></div>
+                            <div class="contact-text">
+                                <span>Email</span>
+                                <a href="mailto:syaifulbahri.bd@gmail.com">syaifulbahri.bd@gmail.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="ph ph-phone"></i></div>
+                            <div class="contact-text">
+                                <span>Telepon</span>
+                                <a href="tel:+6285711900035">+62 857 1190 0035</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon"><i class="ph ph-map-pin"></i></div>
+                            <div class="contact-text">
+                                <span>Lokasi</span>
+                                <p>1. Tanjungasri, Sumedang, Jawa Barat, Indonesia</br>2. Pajajaran, Maleber Utara, Bandung, Jawa Barat, Indonesia</br></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-form-wrapper" style="display: flex; align-items: center; justify-content: center;">
+                    <div class="text-center" style="width: 100%;">
+                        <h3 style="margin-bottom: 24px; font-family: var(--font-heading);">Kirim Pesan Cepat</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 32px;">Klik tombol di bawah ini untuk terhubung langsung dengan saya melalui WhatsApp.</p>
+                        <a href="https://wa.me/6285711900035" target="_blank" class="btn btn-primary" style="padding: 16px 32px; font-size: 1.1rem; gap: 12px; background: #25D366; box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);">
+                            <i class="ph-fill ph-whatsapp-logo" style="font-size: 1.5rem;"></i> Hubungi via WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer class="footer">
-        <div class="container text-center">
-            <!--/* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-            <small class="copyright">Dibuat dengan <i class="fas fa-heart"></i></small>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="year"></span> Syaiful Bahri. Seluruh hak cipta dilindungi.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </div>
-        <!--//container-->
     </footer>
-    <!--//footer-->
 
-    <!-- Javascript -->
-    <script type="text/javascript" src="assets/plugins/popper.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/vanilla-rss/dist/rss.global.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/dark-mode-switch/dark-mode-switch.min.js"></script>
-    <!-- github calendar plugin -->
-    <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
-    <!-- github activity plugin -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
-    <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>
-    <script type="text/javascript">
-        $(window).on('load', function() {
-            $('#myModal').modal('show');
-        });
-    </script>
+    <!-- Iframe Modal -->
+    <div id="iframe-modal" class="modal-overlay hidden">
+        <div class="modal-content iframe-content">
+            <button id="close-iframe-btn" class="close-btn"><i class="ph ph-x"></i></button>
+            <iframe id="project-iframe" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
-
 </html>
